@@ -6,12 +6,24 @@
 
 }
 
+.container {
+    max-width: 1200px;
+    padding-inline: 32px;
+    width: 100%;
+}
+
+.d-flex {
+    display: flex;
+}
+
 .nav {
     display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
     justify-content: space-between;
     align-items: center;
     background-color: black;
-    height: 60px;
+    padding: 8px;
 }
 
 .nav-left {
@@ -52,13 +64,18 @@ nav span {
 /* start section 1 */
 .sec1 {
     background-color: rgb(34, 33, 33);
-    height: 140px;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    /* position: sticky;
-    top: 0; */
-    /* z-index: 9999; */
+    padding-block: 16px;
+}
+
+.sec1 .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
 }
 
 .sec1-left h2 {
@@ -74,12 +91,17 @@ nav span {
     letter-spacing: 3px;
 }
 
-.sec1-right {}
+.sec1-right {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+}
 
 .sec1-right a {
     color: white;
     text-decoration: none;
-    padding: 15px;
+    padding: 8px;
     text-transform: capitalize;
 }
 
@@ -109,10 +131,9 @@ nav span {
 }
 
 .sec2-left {
-    position: absolute;
+position: absolute;
     left: 150px;
     top: 150px;
-    width: 600px;
 }
 
 .sec2-left h4 {
@@ -209,20 +230,23 @@ hr {
 /* end section 2 */
 /* start section 3 */
 .sec3 {
-    height: 600px;
     background-color: rgb(1, 1, 1);
-    display: flex;
-    justify-content: space-between;
-    padding: 70px 130px;
 
 
 }
 
+.sec3-left {
+    width: 33.333333%;
+    padding-inline: 20px;
+}
+
 .container-sec3 {
-    width: 1150px;
     display: flex;
     justify-content: space-between;
     margin: auto;
+    max-width: 1200px;
+    padding: 50px 0px;
+    flex-wrap: wrap;
 }
 
 hr {
@@ -276,8 +300,6 @@ hr {
 
 .sec3-right {
     display: flex;
-    padding-right: 70px;
-
 }
 
 .sec3-right img {
@@ -344,15 +366,23 @@ hr {
 /* start section 4 */
 .sec4 {
     background-color: #131313;
-    height: 600px;
     display: flex;
     justify-content: space-around;
-    position: relative;
 }
 
-.sec4 .img-left {
-    margin-top: 70px;
+.img-sec4 {
+    width: 33.33333%;
+    padding: 20px;
 }
+
+.img-sec4 img {
+    width: 100%;
+}
+
+.contain-right {
+    width: 66.6666%;
+}
+
 
 .sec4-right h5 {
     margin: 70px 0 20px;
@@ -409,21 +439,26 @@ hr {
     background-image: url(./1.jpg);
     background-size: cover;
     background-attachment: fixed;
-
-
-
+    display: flex;
+    justify-content: space-around;
 }
+
+
+
 
 .container-sec5 {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: center;
-    height: 350px;
+    max-width: 1200px;
+    padding-block: 110px;
+    width: 100%;
 
 }
 
 .sec5 img {
-    width: 90px;
+    width: 45%;
 }
 
 .sec5 h2 {
@@ -450,30 +485,32 @@ hr {
     align-items: center;
 }
 
-.img-numper {}
+.img-numper {
+    text-align: center;
+}
 
 /* end section 5 */
 /* start section 6 */
 .sec6 {
     background-color: black;
+    display: flex;
+    justify-content: space-around;
 }
 
 .sec6 .sec6-left {
-    width: 1150px;
-    margin: auto;
+    /* margin: auto; */
     display: flex;
     flex-wrap: wrap;
 
 }
 
 .our-latest {
-    width: 766px;
+    width: 66%;
 
 }
 
 .sec6 img {
-    width: 383px;
-    height: 360px;
+    width: 33%;
     transition: 1s;
 }
 
@@ -533,23 +570,21 @@ hr {
     background-attachment: fixed;
     background-position: 0;
     opacity: 0.9;
-
+    display: flex;
+    justify-content: space-around;
 
 }
 
 .container-sec7 {
-    width: 1150px;
-    height: 250px;
-    margin: auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
-
+    padding-block: 90px;
+    flex-wrap: wrap;
 }
 
 .container-sec7 img {
-    width: 180px;
-    height: 75px;
+    width: 15%;
     color: rgb(122, 120, 116);
     filter: grayscale(100%);
     transition: 1s;
@@ -564,21 +599,21 @@ hr {
 /* start section 8 */
 .sec8 {
     background-color: black;
-    height: 900px;
+    display: flex;
+    justify-content: space-around;
 
 }
 
 .container-sec8 {
-    width: 1150px;
     background-color: black;
-    margin: auto;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .sec8-left,
 .sec8-right {
-    width: 565px;
+    width: 50%;
 }
 
 .sec8-left h4 {
@@ -603,8 +638,7 @@ hr {
 }
 
 .container-sec8 img {
-    width: 565px;
-    height: 300px;
+    width: 100%;
 }
 
 .sec8-right p {
@@ -637,17 +671,20 @@ hr {
 /* end section 8 */
 /* start sec 9 */
 .sec9 {
-    height: 850px;
     background-image: url(./Bg-1.jpg);
     background-attachment: fixed;
     background-size: cover;
     position: relative;
+    display: flex;
+    justify-content: space-around;
+
 }
 
-.container-sec9 {
-    width: 1150px;
-    margin: auto;
+.sec9 .text {
+    width: 100%;
+    padding-block: 20px;
 }
+
 
 .container-sec9 h4 {
     text-align: center;
@@ -686,15 +723,13 @@ hr {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin-top: 40px;
     position: relative;
-
+    padding-block: 20px;
 }
 
 .designers-person {
-    width: 555px;
+    width: 49%;
     background-color: rgb(15, 15, 15);
-    height: 220px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -712,7 +747,6 @@ hr {
 }
 
 .designers img {
-    width: 270px;
     height: 230px;
     filter: grayscale(100%);
     z-index: 2;
@@ -766,15 +800,19 @@ hr {
 /* start section 10 */
 .sec10 {
     background-color: black;
-    height: 1570px;
-    position: relative;
+    display: flex;
+    justify-content: space-around;
+
 
 }
 
 .container-sec10 {
-    width: 1150px;
-    background-color: black;
-    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.container-text {
+    width: 100%;
 }
 
 .container-sec10 h4 {
@@ -799,11 +837,11 @@ hr {
     color: rgb(60, 190, 173);
 }
 
-.container-sec10 hr {
+/* .container-sec10 hr {
     position: absolute;
     right: 48%;
     top: 110px;
-}
+} */
 
 .container-sec10 p {
     text-align: center;
@@ -815,21 +853,14 @@ hr {
 }
 
 
-.imgs-sec10 {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
 
-}
-
-.imgs-sec10 img {
-    width: 370px;
-    height: 395px;
-    margin-bottom: 20px;
+.sec10 img {
+    width: 31%;
     transition: 1s;
+    margin: 10px;
 }
 
-.imgs-sec10 img:hover {
+.sec10 img:hover {
     transform: scale(1.1);
 }
 
@@ -838,22 +869,17 @@ hr {
 /* end section 10 */
 /* start section 11 */
 .sec11 {
-    height: 600px;
     background-image: url(./adadad.jpg);
     background-size: cover;
-    position: relative;
     background-attachment: fixed;
-
+    display: flex;
+    justify-content: space-around;
+    padding-block: 50px;
 
 }
 
 .container-sec11 {
-    width: 1150px;
-    margin: auto;
     display: flex;
-    position: absolute;
-    top: 30%;
-    right: 12%;
 }
 
 .left-sec11 {
@@ -959,19 +985,21 @@ hr {
 /* end section 11 */
 /* start section 12 */
 .sec12 {
-    height: 900px;
+    display: flex;
+    justify-content: space-around;
     background-color: black;
-    position: relative;
 }
 
 .container-sec12 {
-    width: 1150px;
     background-color: black;
-    margin: auto;
-    position: absolute;
-    top: 10%;
-    right: 12%;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1200px;
 
+}
+
+.sec12 .text {
+    width: 100%;
 }
 
 .container-sec12 h4 {
@@ -1010,7 +1038,7 @@ hr {
 }
 
 .container-imgs img {
-    width: 375px;
+    width: 100%;
     padding: 15px;
     transition: 0.5s;
 }
@@ -1020,8 +1048,7 @@ hr {
 }
 
 .container-imgs .imgs3 {
-    width: 375px;
-    height: 500px;
+    width: 32%;
     background-image: linear-gradient(to bottom, rgb(12, 39, 33), rgb(12, 39, 33), rgb(12, 39, 33), rgb(12, 39, 33), rgb(14, 13, 13), rgb(14, 13, 13));
 
 }
@@ -1065,29 +1092,23 @@ hr {
 /* start section 13 */
 .sec13 {
     background-color: #141414;
-    height: 900px;
-    position: relative;
+    display: flex;
+    justify-content: space-around;
 
 }
 
 .container-sec13 {
-    width: 1150px;
-    margin: auto;
     display: flex;
     justify-content: space-between;
-    position: absolute;
-    top: 10%;
-    right: 12%;
+    padding-block: 40px;
+
 }
 
 .container-sec13 .form {
-    width: 575px;
-    height: 640px;
+    width: 50%;
 }
 
 .container-sec13 .form fieldset {
-    width: 575px;
-    height: 640px;
     border: 4px solid rgb(60, 190, 173);
 }
 
@@ -1141,6 +1162,7 @@ hr {
 
 .right-sec13 {
     margin: 40px 0px 30px 40px;
+    width: 50%;
 }
 
 .right-sec13 h4 {
@@ -1271,6 +1293,13 @@ hr {
 }
 
 
+
+
+
+
+
+
+
 @media (max-width: 575.98px) {
     .sec2-left h1 {
         font-size: 35px;
@@ -1279,21 +1308,6 @@ hr {
         text-transform: uppercase;
     }
 
-    .sec3 {
-        background-color: rgb(1, 1, 1);
-        display: flex;
-        padding: 73px 40px;
-        height: unset;
-    }
-
-    .brand_ux {
-        transform: translateY(30px);
-    }
-
-    .container-sec3 {
-        flex-direction: column;
-        width: unset;
-    }
 
     .sec3-right {
         margin-top: 20px;
@@ -1302,52 +1316,62 @@ hr {
 
     .sec4 {
         background-color: #131313;
-        position: relative;
-        padding: 20px;
+        /* position: relative; */
+        /* padding: 20px; */
         flex-direction: column;
-        height: unset;
-    }
-
-    .sec4-right {
-        width: 500px;
+        /* height: unset; */
     }
 
 
-
-    .sec6 .sec6-left {
-        margin: auto;
+    .container .d-flex {
         display: flex;
         flex-wrap: wrap;
-        padding: 20px;
-        width: unset;
+    }
+
+    .img-sec4 img {
+        width: 100%;
+    }
+
+    .continer-code {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .container-sec5 {
+        gap: 30px;
+    }
+
+    .sec6 .sec6-left {
+        display: flex;
+        flex-wrap: wrap;
+        padding-block: 20px;
     }
 
     .sec6 img {
-        width: 383px;
-        height: 360px;
-        transition: 1s;
+        width: 100%;
         margin-top: 20px;
         margin-top: 20px;
     }
 
     .container-sec7 {
-        width: unset;
-        height: 330px;
-        margin: auto;
-        flex-direction: column;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .container-sec7 img {
+        width: 100%;
     }
 
     .container-sec8 {
 
         background-color: black;
-        margin: auto;
-        flex-direction: column;
         padding: 20px;
     }
 
     .sec8-left,
     .sec8-right {
-        width: 367px;
+        width: 100%;
     }
 
     .sec8-left h4 {
@@ -1364,31 +1388,23 @@ hr {
 
     }
 
-    .sec8-right {
-        width: unset;
-    }
-
     .sec8-right .img-right {
         margin: 0px;
     }
 
     .container-sec8 img {
-        width: 367px;
+        width: 100%;
     }
 
     .sec9 {
-        height: unset;
         background-image: url(./Bg-1.jpg);
         background-attachment: fixed;
         background-size: cover;
-        position: relative;
-        top: 91px;
-        
+
     }
 
-    .container-sec9 {
-        width: unset;
-        padding: 20px;
+    .sec9 .text {
+        width: 100%;
     }
 
     .sec9 h1 {
@@ -1400,17 +1416,15 @@ hr {
     }
 
     .designers-person {
-        width: 500px;
+        width: 100%;
         background-color: rgb(15, 15, 15);
-        height: 220px;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin-bottom: 40px;
     }
+
     .designers img {
-        width: 150px;
-        height: 177px;
+        width: 100%;
         filter: grayscale(100%);
         z-index: 2;
         transition: 1s;
@@ -1418,80 +1432,75 @@ hr {
 
     .sec10 {
         background-color: black;
-        height: unset;
         position: relative;
     }
 
     .container-sec10 {
-        width: unset;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .sec10 img {
+        width: 100%;
     }
 
     .sec11 {
-        height: 666px;
-        width: 570px;
         background-image: url(./adadad.jpg);
         background-size: cover;
         background-attachment: fixed;
-        position: relative;
     }
-    
+
 
     .container-sec11 {
-        width: unset;
         padding: 20px;
         flex-direction: column;
-        position: absolute;
-           top: 0%;
-         right: 0%;
+        padding: 20px;
+
     }
 
     .sec12 {
-        height: unset;
         background-color: black;
     }
 
     .container-sec12 {
-        width: unset;
         background-color: black;
-        margin: auto;
-        position: relative;
+        padding: 20px;
 
     }
 
     .container-imgs {
         flex-direction: column;
+        
     }
 
     .container-imgs img {
-        padding: 15px;
         transition: 0.5s;
     }
 
     .container-imgs .imgs3 {
-        height: unset;
         margin-top: 20px;
+        width: 100%;
         background-image: linear-gradient(to bottom, rgb(12, 39, 33), rgb(12, 39, 33), rgb(12, 39, 33), rgb(12, 39, 33), rgb(14, 13, 13), rgb(14, 13, 13));
     }
-    .sec13{
-        height: 1460px;
+
+    .sec13 {
     }
 
     .container-sec13 {
-        width: unset;
-        margin: auto;
         flex-direction: column;
     }
 
     .container-sec13 .form {
-        width: 450px;
+        width: 100%;
     }
-    .container-sec13 .form fieldset {
-        width: 490px;
 
-    }    
+    .container-sec13 .form fieldset {
+        width:100%;
+
+    }
 
     .container-sec13 .form input {
-        width: 461px;
+        width:95%
     }
 
     .container-sec13 .form label {
@@ -1499,11 +1508,11 @@ hr {
     }
 
     .container-sec13 .form textarea {
-        width: 460px;
+        width: 95%;
     }
 
     .container-sec13 .form button {
-        width: 460px;
+        width: 95%;
     }
 
     .container-footer {
@@ -1518,15 +1527,243 @@ hr {
 
 }
 
-@media (min-width: 576px) and (max-width: 767.98px) {}
+
+
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .sec2-left h1 {
+        font-size: 35px;
+        font-weight: 800;
+        color: white;
+        text-transform: uppercase;
+    }
+
+
+    .sec3-right {
+        margin-top: 20px;
+        flex-direction: column;
+    }
+
+    .sec4 {
+        background-color: #131313;
+        flex-direction: column;
+    }
+
+
+    .container .d-flex {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .img-sec4 img {
+        width: 100%;
+    }
+
+    .continer-code {
+        display: flex;
+        gap: 20px;
+    }
+
+    .container-sec5 {
+        gap: 30px;
+    }
+
+    .sec6 .sec6-left {
+        display: flex;
+        flex-wrap: wrap;
+        padding-block: 20px;
+    }
+
+    .sec6 img {
+        width: 48%;
+        margin-top: 10px;
+        margin-inline: 5px;
+    }
+
+    .container-sec7 {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .container-sec7 img {
+        width: 100%;
+    }
+
+    .container-sec8 {
+
+        background-color: black;
+        padding: 20px;
+    }
+
+    .sec8-left,
+    .sec8-right {
+        width: 100%;
+    }
+
+    .sec8-left h4 {
+        text-align: center;
+        margin: 0px;
+    }
+
+    .sec8-left h1 {
+        font-size: 30px;
+    }
+
+    .sec8-right p {
+        margin: 20px 0px 20px;
+
+    }
+
+    .sec8-right .img-right {
+        margin: 0px;
+    }
+
+    .container-sec8 img {
+        width: 80%;
+    }
+
+    .sec9 {
+        background-image: url(./Bg-1.jpg);
+        background-attachment: fixed;
+        background-size: cover;
+
+    }
+
+    .sec9 .text {
+        width: 100%;
+    }
+
+    .sec9 h1 {
+        font-size: 30px;
+    }
+
+    .container-sec9 p {
+        text-align: start;
+    }
+
+    .designers-person {
+        width: 80%;
+        background-color: rgb(15, 15, 15);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .designers img {
+        width: 100%;
+        filter: grayscale(100%);
+        z-index: 2;
+        transition: 1s;
+    }
+
+    .sec10 {
+        background-color: black;
+        position: relative;
+    }
+    .sec10 hr{
+        position: absolute;
+        right: 35%;
+    }
+    }
+    .container-sec10 {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .sec10 img {
+        width: 46%;
+    }
+
+    .sec11 {
+        background-image: url(./adadad.jpg);
+        background-size: cover;
+        background-attachment: fixed;
+    }
+
+
+    .container-sec11 {
+        padding: 20px;
+        flex-direction: column;
+        padding: 20px;
+
+    }
+
+    .sec12 {
+        background-color: black;
+    }
+
+    .container-sec12 {
+        background-color: black;
+        padding: 20px;
+
+    }
+
+    .container-imgs {
+        flex-direction: column;
+        
+    }
+
+    .container-imgs img {
+        transition: 0.5s;
+    }
+
+    .container-imgs .imgs3 {
+        margin-top: 20px;
+        width: 70%;
+        background-image: linear-gradient(to bottom, rgb(12, 39, 33), rgb(12, 39, 33), rgb(12, 39, 33), rgb(12, 39, 33), rgb(14, 13, 13), rgb(14, 13, 13));
+    }
+
+    .sec13 {
+    }
+
+    .container-sec13 {
+        flex-direction: column;
+    }
+
+    .container-sec13 .form {
+        width: 80%;
+    }
+
+    .container-sec13 .form fieldset {
+        width:100%;
+
+    }
+
+    .container-sec13 .form input {
+        width:95%
+    }
+
+    .container-sec13 .form label {
+        font-size: 22px;
+    }
+
+    .container-sec13 .form textarea {
+        width: 95%;
+    }
+
+    .container-sec13 .form button {
+        width: 95%;
+    }
+
+    .container-footer {
+        position: unset;
+        width: unset;
+
+    }
+
+
+
+
+
 
 @media (min-width: 768px) and (max-width: 991.98px) {
-    
-.sec2-left {
-    position: absolute;
-    left: 30px;
-    top: 70px;
-}
+
+    .sec2-left {
+        position: absolute;
+        left: 30px;
+        top: 70px;
+    }
+
     .sec3 {
         height: unset;
         padding: 48px 48px;
@@ -1545,6 +1782,7 @@ hr {
     .web-design:hover {
         transform: unset;
     }
+
     .sec2-left h1 {
         font-size: 35px;
         font-weight: 800;
@@ -1557,7 +1795,7 @@ hr {
         display: flex;
         padding: 73px 40px;
         height: unset; */
-    
+
 
     .brand_ux {
         transform: translateY(30px);
@@ -1656,7 +1894,7 @@ hr {
         background-size: cover;
         position: relative;
         top: 91px;
-        
+
     }
 
     .container-sec9 {
@@ -1681,6 +1919,7 @@ hr {
         align-items: center;
         margin-bottom: 40px;
     }
+
     .designers img {
         width: 150px;
         height: 177px;
@@ -1707,15 +1946,15 @@ hr {
         background-attachment: fixed;
         position: relative;
     }
-    
+
 
     .container-sec11 {
         width: unset;
         padding: 20px;
         flex-direction: column;
         position: absolute;
-           top: 0%;
-         right: 0%;
+        top: 0%;
+        right: 0%;
     }
 
     .sec12 {
@@ -1745,7 +1984,8 @@ hr {
         margin-top: 20px;
         background-image: linear-gradient(to bottom, rgb(12, 39, 33), rgb(12, 39, 33), rgb(12, 39, 33), rgb(12, 39, 33), rgb(14, 13, 13), rgb(14, 13, 13));
     }
-    .sec13{
+
+    .sec13 {
         height: 1460px;
     }
 
@@ -1758,10 +1998,11 @@ hr {
     .container-sec13 .form {
         width: 450px;
     }
+
     .container-sec13 .form fieldset {
         width: 490px;
 
-    }    
+    }
 
     .container-sec13 .form input {
         width: 461px;
@@ -1795,25 +2036,3 @@ hr {
 
 
 
-/* @media (max-width: 1199.98px) {} */
-
-@media (min-width: 992px) and (max-width: 1399.98px) {
-    .sec3 {
-        height: unset;
-    }
-
-    .container-sec3 {
-        flex-direction: column;
-        width: unset;
-    }
-
-    .sec3-right {
-        margin-top: 62px;
-    }
-
-    .sec3-right,
-    .web-design:hover {
-        transform: unset;
-    }
-
-}
